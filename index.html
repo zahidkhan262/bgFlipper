@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Fliper</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+        background: #000;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    button {
+        background: crimson;
+        opacity: 0.9;
+        width: 60%;
+        margin: 0 auto;
+        padding: 10px 15px;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        font-size: 1.2em;
+    }
+
+    button:focus,
+    button:hover {
+        background: #019eff;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="btn">
+            <button type="button"  onclick="bgChange()">Click me</button>
+        </div>
+    </header>
+
+
+    <script>
+        let headerBg =document.querySelector('header');
+
+
+        function bgChange(){
+            // -------------------------------> main code<-------------------------------------------------//
+            headerBg.style.backgroundColor =`rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`
+        }
+        
+
+
+
+
+        
+        // headerBg.style.backgroundColor ="rgb("+ Math.floor(Math.random() * 255) +","+ Math.floor(Math.random() * 255) +","+ Math.floor(Math.random() * 255) +")"
+
+        // let randomBg=(Math.floor(Math.random()*255));
+
+        // headerBg.style.backgroundColor =`rgb(${randomBg} ${randomBg} ${randomBg})`
+
+
+        </script>
+
+</body>
+
+</html>
